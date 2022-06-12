@@ -39,6 +39,17 @@ const Reviews = () => {
 		});
 	}
 
+  // Function to Get Random index-state value when surprise-btn is clicked
+  function getRandomNumber() {
+    let randomNumber = Math.floor(Math.random() * (people.length - 1))
+
+    if (randomNumber === index) {
+      return (randomNumber += 1)
+    }
+
+    setIndex(checkIndex(randomNumber))
+  }
+
 	return (
 		<>
 			<section className="w-[45rem] shadow-lg p-6 flex flex-col items-center gap-4">
@@ -58,6 +69,7 @@ const Reviews = () => {
 					</button>
 				</span>
 				<button
+          onClick={getRandomNumber}
 					id="btn"
 					className="py-2 px-4 text-blue-400 text-[1.4rem] font-medium border-blue-100 border-2 hover:bg-blue-400 hover:text-white transition-all"
 				>
