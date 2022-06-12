@@ -9,16 +9,25 @@ const Reviews = () => {
 	// Getting values from the the People Object
 	const { name, job, image, text } = people[index];
 
+	// Function to Check if Index state is valid
+	function checkIndex(number) {
+		if (number < 0) {
+			return people.length - 1;
+		}
+
+		if (number > people.length - 1) {
+			return 0;
+		}
+
+    return number
+	}
+
 	// Function to Increase the value of index state
 	function nextArrowBtn() {
 		setIndex((index) => {
 			let newIndex = (index += 1);
 
-			if (newIndex > people.length - 1) {
-				return (newIndex = 0);
-			}
-      
-			return newIndex;
+			return checkIndex(newIndex);
 		});
 	}
 	// Function to Decrease the value of index state
@@ -26,11 +35,7 @@ const Reviews = () => {
 		setIndex((index) => {
 			let newIndex = (index -= 1);
 
-			if (newIndex < 0) {
-				return people.length - 1;
-			}
-
-			return newIndex;
+			return checkIndex(newIndex);
 		});
 	}
 
