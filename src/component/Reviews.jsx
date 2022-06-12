@@ -13,18 +13,18 @@ const Reviews = () => {
 		<>
 			<section className="w-[45rem] shadow-md p-6 flex flex-col items-center gap-4">
 				<div id="img">
-					<img src={image} alt={name}/>
-          <FaQuoteRight id="quote-icon"/>
+					<img src={image} alt={name} />
+					<FaQuoteRight id="quote-icon" />
 				</div>
 				<h3 className="font-bold text-3xl">{name}</h3>
 				<p className="font-semibold uppercase text-2xl text-blue-400">{job}</p>
 				<p className="text-center text-gray-500">{text}</p>
 				<span>
 					<button>
-						<FaChevronLeft className="text-2xl text-blue-400 mr-3" />
+						<FaChevronLeft className="font-bold text-2xl text-blue-400 mr-3 active:text-blue-700" />
 					</button>
 					<button>
-						<FaChevronRight className="text-2xl text-blue-400 ml-3" />
+						<FaChevronRight className="font-bold text-2xl text-blue-400 ml-3 active:text-blue-700" />
 					</button>
 				</span>
 				<button
