@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import people from "../data";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight, FaChevronLeft, FaQuoteRight } from "react-icons/fa";
 
 const Reviews = () => {
 	// Setting the state for people array index
@@ -14,6 +14,7 @@ const Reviews = () => {
 			<section className="w-[45rem] shadow-md p-6 flex flex-col items-center gap-4">
 				<div id="img">
 					<img src={image} alt={name}/>
+          <FaQuoteRight id="quote-icon"/>
 				</div>
 				<h3 className="font-bold text-3xl">{name}</h3>
 				<p className="font-semibold uppercase text-2xl text-blue-400">{job}</p>

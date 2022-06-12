@@ -11,7 +11,7 @@
 	top: 100%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  margin-top: .8rem;
+	margin-top: 0.8rem;
 }
 
 #img {
@@ -24,10 +24,20 @@
 
 #img img {
 	position: absolute;
-  top: .2rem;
-  left: -.5rem;
+	top: 0.2rem;
+	left: -0.5rem;
 	width: 100%;
 	height: 100%;
-  border-radius: inherit;
+	border-radius: inherit;
 	object-fit: cover;
+}
+
+#quote-icon {
+	font-size: 3rem;
+	background-color: cornflowerblue;
+	color: #fff;
+	padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
 }
