@@ -1,8 +1,40 @@
-import React from 'react'
-import persons from '../data'
+import React, { useState } from "react";
+import people from "../data";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const Reviews = () => {
-  return <div className="mx-auto w-[35rem] shadow-lg p-6">Hello</div>;
-}
+	// Setting the state for people array index
+	const [index, setIndex] = useState(0);
 
-export default Reviews
+	// Getting values from the the People Object
+	const { name, job, image, text } = people[index];
+
+	return (
+		<>
+			<section className="w-[45rem] shadow-md p-6 flex flex-col items-center gap-4">
+				<div id="img">
+					<img src={image} alt={name}/>
+				</div>
+				<h3 className="font-bold text-3xl">{name}</h3>
+				<p className="font-semibold uppercase text-2xl text-blue-400">{job}</p>
+				<p className="text-center text-gray-500">{text}</p>
+				<span>
+					<button>
+						<FaChevronLeft className="text-2xl text-blue-400 mr-3" />
+					</button>
+					<button>
+						<FaChevronRight className="text-2xl text-blue-400 ml-3" />
+					</button>
+				</span>
+				<button
+					id="btn"
+					className="py-2 px-4 text-blue-400 text-[1.4rem] font-medium border-blue-100 border-2 hover:bg-blue-400 hover:text-white transition-all"
+				>
+					Surprise Me
+				</button>
+			</section>
+		</>
+	);
+};
+
+export default Reviews;

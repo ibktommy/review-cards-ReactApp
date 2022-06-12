@@ -1,4 +1,4 @@
-const reviews = [
+const people = [
   {
     id: 1,
     name: 'Jack Doll',
@@ -43,4 +43,4 @@ const reviews = [
   },
 ]
 
-export default reviews
+export default people
